@@ -57,7 +57,7 @@
                         	<img alt="how_to-nested1" src="images/content/how_to-nested1.png">
                         </p>
                         
-                        <h2>Serving the Search in your whole portal</h2>
+                        <h2>Serving the Quick Search for all portal pages</h2>
                         <p>If you want to make the portlet available on every site of you portal, a good approach is to integrate it into your theme. 
                         This is done by pasting following Velocity snippet into your portal_normal.vm template. Then you also can hide the portlet via CSS. 
                         Then your users can call the portlet by pressing ctrl + ENTER.</p>
@@ -66,7 +66,7 @@
 							#set ($VOID = $velocityPortletPreferences.setValue('portlet-setup-show-borders', 'false'))<br/>
 							#set ($VOID = $velocityPortletPreferences.setValue('maximumSearchResults', '5'))<br/>
 							#set ($VOID = $velocityPortletPreferences.setValue('minSearchLetters', '3'))<br/>
-							#set ($VOID = $velocityPortletPreferences.setValue('assetTypes', 'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,com.liferay.portlet.documentlibrary.model.DLFileEntry'))<br/>
+							#set ($VOID = $velocityPortletPreferences.setValue('assetTypes', 'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,com.liferay.portlet.documentlibrary.model.DLFileEntry,com.liferay.portlet.bookmarks.model.BookmarksEntry,com.liferay.portlet.blogs.model.BlogsEntry,com.liferay.portlet.messageboards.model.MBMessage,com.liferay.portlet.wiki.model.WikiPage,com.liferay.portal.model.Group,com.liferay.portal.model.Layout'))<br/>
 							#set ($myPortletId = "quicksearch_WAR_quicksearchportlet")<br/>
 							$theme.runtime($myPortletId, '', $velocityPortletPreferences.toString())<br/>
 							#set ($VOID = $velocityPortletPreferences.reset())<br/>
@@ -87,6 +87,16 @@
 	                        <img src="images/content/type-search.png"/>
 	                        <br />
 	                        You have to consider that you are restricted to the types which are configured in the portlet configuration.
+	                        <ul>
+	                        	<li>user</li>
+	                        	<li>file</li>
+	                        	<li>article</li>
+	                        	<li>site</li>
+	                        	<li>page</li>
+	                        	<li>blog</li>
+	                        	<li>message-board-messages</li>
+	                        	<li>wiki-page</li>
+	                        </ul>
                         </p>
                     </div>
                 </div>
