@@ -1,113 +1,145 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Quick Search Portlet</title>
-    <meta name="description" content="A free responsive HTML 5 template with a clean style.">
-    <meta name="keywords" content="free template, html 5, responsive, clean, scss">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/touch/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/touch/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/touch/apple-touch-icon-144x144.png">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="format-detection" content="address=no">
-    <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Quick Search Portlet</title>
+<meta name="description"
+	content="A free responsive HTML 5 template with a clean style.">
+<meta name="keywords"
+	content="free template, html 5, responsive, clean, scss">
+<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/touch/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/touch/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="images/touch/apple-touch-icon-144x144.png">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
         <script src="js/html5.js"></script>
         <script src="js/respond.js"></script>
     <![endif]-->
 </head>
 <body class="no-js">
-    <div class="main">
-        <header>
-            <div class="wrap">
-                <!-- <img src="upload/iphone.png" height="532" width="252" alt="" class="header-img"> -->
-                <div class="header-wrapper">
-                    <h1>Quick Search Portlet</h1>
-                    <p>Speed up your users. Speed up your portal. Try the Quick-Search.</p>
-                    <!-- <p class="autor"><a href="#">Dan Rowinski</a></p> -->
-                    <div class="buttons-wrapper">
-                        <a href="#" class="button">Download Portlet</a>
-                        <a href="#documentation" class="button button-stripe">Documentation</a>
-                    </div>
-                </div>
-                <!-- /.header-wrapper -->
-            </div>
-            <!-- /.wrap -->
-        </header>
-        <div class="spanning">
-        	<div class="discover clearfix">
-                <div class="wrap">
-                    <div class="clearfix">
-                    	<h1><a name="documentation">Documentation</a></h1>
-                    	<div class="wrap">
-                        <h2>Quick start</h2>
-                        <p>For a quick start just drop the portlet on a portal page. Press ctrl + ENTER to display the search field. <br/><img src="images/content/how_to-drop.png"/></p>
-                        
-                        <p>
-                        	Alternatively you can configure the portlet to include the textfield in the portlet body.
-                        	<br />
-                        	<img alt="how_to-nested1" src="images/content/how_to-nested1.png">
-                        </p>
-                        
-                        <h2>Serving the Quick Search for all portal pages</h2>
-                        <p>If you want to make the portlet available on every site of you portal, a good approach is to integrate it into your theme. 
-                        This is done by pasting following Velocity snippet into your portal_normal.vm template. Then you also can hide the portlet via CSS. 
-                        Then your users can call the portlet by pressing ctrl + ENTER.</p>
-                        <code>
-							#set ($VOID = $velocityPortletPreferences.setValue('display-style', '1'))<br/>
-							#set ($VOID = $velocityPortletPreferences.setValue('portlet-setup-show-borders', 'false'))<br/>
-							#set ($VOID = $velocityPortletPreferences.setValue('maximumSearchResults', '5'))<br/>
-							#set ($VOID = $velocityPortletPreferences.setValue('minSearchLetters', '3'))<br/>
-							#set ($VOID = $velocityPortletPreferences.setValue('assetTypes', 'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,com.liferay.portlet.documentlibrary.model.DLFileEntry,com.liferay.portlet.bookmarks.model.BookmarksEntry,com.liferay.portlet.blogs.model.BlogsEntry,com.liferay.portlet.messageboards.model.MBMessage,com.liferay.portlet.wiki.model.WikiPage,com.liferay.portal.model.Group,com.liferay.portal.model.Layout'))<br/>
-							#set ($myPortletId = "quicksearch_WAR_quicksearchportlet")<br/>
-							$theme.runtime($myPortletId, '', $velocityPortletPreferences.toString())<br/>
-							#set ($VOID = $velocityPortletPreferences.reset())<br/>
-						</code>
-						<p>
-							<br/>
-							In this code you are also setting the preferences:
+	<div class="main">
+		<header>
+			<div class="wrap">
+				<!-- <img src="upload/iphone.png" height="532" width="252" alt="" class="header-img"> -->
+				<div class="header-wrapper">
+					<div class="header-left">
+						<h1>Quick Search Portlet</h1>
+						<p>Speed up your users. Speed up your portal. Try the
+							Quick-Search.</p>
+						<!-- <p class="autor"><a href="#">Dan Rowinski</a></p> -->
+						<div class="buttons-wrapper">
+							<a href="#" class="button">Download Portlet</a> <a
+								href="#documentation" class="button button-stripe">Documentation</a>
+						</div>
+					</div>
+					<div class="header-right"></div>
+					<iframe
+						src="https://player.vimeo.com/video/126062669?title=0&byline=0&portrait=0"
+						width="600" height="338" frameborder="0" webkitallowfullscreen
+						mozallowfullscreen allowfullscreen></iframe>
+				</div>
+				<!-- /.header-wrapper -->
+			</div>
+			<!-- /.wrap -->
+		</header>
+		<div class="spanning">
+			<div class="discover clearfix">
+				<div class="wrap">
+					<div class="clearfix">
+						<h1>
+							<a name="documentation">Documentation</a>
+						</h1>
+						<div class="wrap">
+							<h2>Quick start</h2>
+							<p>
+								For a quick start just drop the portlet on a portal page. Press
+								ctrl + ENTER to display the search field. <br /> <img
+									src="images/content/how_to-drop.png" />
+							</p>
+
+							<p>
+								Alternatively you can configure the portlet to include the
+								textfield in the portlet body. <br /> <img alt="how_to-nested1"
+									src="images/content/how_to-nested1.png">
+							</p>
+
+							<h2>Serving the Quick Search for all portal pages</h2>
+							<p>If you want to make the portlet available on every site of
+								you portal, a good approach is to integrate it into your theme.
+								This is done by pasting following Velocity snippet into your
+								portal_normal.vm template. Then you also can hide the portlet
+								via CSS. Then your users can call the portlet by pressing ctrl +
+								ENTER.</p>
+							<code>
+								#set ($VOID =
+								$velocityPortletPreferences.setValue('display-style', '1'))<br />
+								#set ($VOID =
+								$velocityPortletPreferences.setValue('portlet-setup-show-borders',
+								'false'))<br /> #set ($VOID =
+								$velocityPortletPreferences.setValue('maximumSearchResults',
+								'5'))<br /> #set ($VOID =
+								$velocityPortletPreferences.setValue('minSearchLetters', '3'))<br />
+								#set ($VOID = $velocityPortletPreferences.setValue('assetTypes',
+								'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,com.liferay.portlet.documentlibrary.model.DLFileEntry,com.liferay.portlet.bookmarks.model.BookmarksEntry,com.liferay.portlet.blogs.model.BlogsEntry,com.liferay.portlet.messageboards.model.MBMessage,com.liferay.portlet.wiki.model.WikiPage,com.liferay.portal.model.Group,com.liferay.portal.model.Layout'))<br />
+								#set ($myPortletId = "quicksearch_WAR_quicksearchportlet")<br />
+								$theme.runtime($myPortletId, '',
+								$velocityPortletPreferences.toString())<br /> #set ($VOID =
+								$velocityPortletPreferences.reset())<br />
+							</code>
+							<p>
+								<br /> In this code you are also setting the preferences:
 							<ul>
-								<li><b>maximumSearchResults:</b> Max. amount of results displayed</li>
-								<li><b>minSearchLetters:</b> Amount of letters to trigger search</li>
+								<li><b>maximumSearchResults:</b> Max. amount of results
+									displayed</li>
+								<li><b>minSearchLetters:</b> Amount of letters to trigger
+									search</li>
 								<li><b>assetTypes:</b> Asset types enabled for search</li>
 							</ul>
-                        </p>
-                        <h2>Search by Type</h2>
-                        <p>
-	                        To search more precisely, the quick-search portlet enables you to search by asset type, you just have to prefix the type name in your query. 
-	                        <br/>
-	                        <img src="images/content/type-search.png"/>
-	                        <br />
-	                        You have to consider that you are restricted to the types which are configured in the portlet configuration.
-	                        <ul>
-	                        	<li>You can use following prefixes to search by type:</li>
-	                        	<li>- user</li>
-	                        	<li>- file</li>
-	                        	<li>- article</li>
-	                        	<li>- site</li>
-	                        	<li>- page</li>
-	                        	<li>- blog</li>
-	                        	<li>- message-board-messages</li>
-	                        	<li>- wiki-page</li>
-	                        </ul>
-                        </p>
-                        <h2>Navigate with the Quick Search</h2>
-                        <p>
-                        	Another feature of Quick Search is that you can navigate through sites and pages. Using the prefix "site:" or "page:" Quick Search provides you the matching sites or pages for which are you permitted to view. If you select an result and press enter you will be redirected on the page, or on the public page of the site you selected. 
-                        </p>
-                    </div>
-                </div>
-                <!-- /.wrap -->
-            </div>
-            <!-- 
+							</p>
+							<h2>Search by Type</h2>
+							<p>
+								To search more precisely, the quick-search portlet enables you
+								to search by asset type, you just have to prefix the type name
+								in your query. <br /> <img src="images/content/type-search.png" />
+								<br /> You have to consider that you are restricted to the
+								types which are configured in the portlet configuration.
+							<ul>
+								<li>You can use following prefixes to search by type:</li>
+								<li>- user</li>
+								<li>- file</li>
+								<li>- article</li>
+								<li>- site</li>
+								<li>- page</li>
+								<li>- blog</li>
+								<li>- message-board-messages</li>
+								<li>- wiki-page</li>
+							</ul>
+							</p>
+							<h2>Navigate with the Quick Search</h2>
+							<p>Another feature of Quick Search is that you can navigate
+								through sites and pages. Using the prefix "site:" or "page:"
+								Quick Search provides you the matching sites or pages for which
+								are you permitted to view. If you select an result and press
+								enter you will be redirected on the page, or on the public page
+								of the site you selected.</p>
+						</div>
+					</div>
+					<!-- /.wrap -->
+				</div>
+				<!-- 
             <div class="promo clearfix">
                 <div class="wrap">
                     <div class="promo-wrapper clearfix">
@@ -136,8 +168,8 @@
                 
             </div>
              -->
-            <!-- /.promo clearfix -->
-            <!-- 
+				<!-- /.promo clearfix -->
+				<!-- 
             <div class="discover clearfix">
                 <div class="wrap">
                     <div class="discover-content clearfix">
@@ -161,8 +193,8 @@
                 
             </div>
              -->
-            <!-- /.discover clearfix -->
-            <!-- 
+				<!-- /.discover clearfix -->
+				<!-- 
             <div class="video clearfix">
                 <div class="wrap">
                     <div class="video-title">Explore. Walk &amp; Ride in action</div>
@@ -181,8 +213,8 @@
                 </div>
             </div>
              -->
-            <!-- /.videos clearfix -->
-            <!-- 
+				<!-- /.videos clearfix -->
+				<!-- 
             <div class="comments clearfix">
                 <div class="wrap">
                     <div class="tab">
@@ -210,8 +242,8 @@
                 
             </div>
              -->
-            <!-- /.comments clearfix -->
-            <!-- 
+				<!-- /.comments clearfix -->
+				<!-- 
             <div class="simple clearfix">
                 <div class="wrap">
                     <div class="simple-content">
@@ -231,8 +263,8 @@
                 
             </div>
              -->
-            <!-- /.simple clearfix -->
-            <!-- 
+				<!-- /.simple clearfix -->
+				<!-- 
             <div class="newsletter clearfix">
                 <div class="wrap">
                     <div class="newsletter-title">our newsletter</div>
@@ -247,12 +279,12 @@
                 
             </div>
              -->
-            <!-- /.newsletter clearfix -->
-        </div>
-        <!-- /.spanning-columns -->
-    </div>
-    <!-- /.main -->
-    <!-- 
+				<!-- /.newsletter clearfix -->
+			</div>
+			<!-- /.spanning-columns -->
+		</div>
+		<!-- /.main -->
+		<!-- 
     <footer>
         <div class="wrap">
             <p>&copy; 2014 <strong>Walk &amp; Ride</strong>, All Rights Reserved</p>
@@ -260,9 +292,9 @@
         
     </footer>
      -->
-    <script src="js/jquery.js"></script>
-    <script src="js/library.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/retina.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/library.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/retina.js"></script>
 </body>
 </html>

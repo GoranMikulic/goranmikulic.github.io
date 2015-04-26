@@ -472,8 +472,20 @@ header .buttons-wrapper .button-stripe {
 
 .header-wrapper {
     padding-top: 87px;
-    max-width: 740px;
+	/* max-width: 740px; */
     /*max-width: 655px;*/
+    width: 100%;
+}
+
+.header-left {
+	float: left;
+	width: 45%;
+}
+
+.header-right {
+	float: right;
+	width: 55%;
+	margin-top: 3em;
 }
 
 /* footer --------------------------  */
