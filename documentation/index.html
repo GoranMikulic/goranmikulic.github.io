@@ -93,7 +93,11 @@
 								'5'))<br /> #set ($VOID =
 								$velocityPortletPreferences.setValue('minSearchLetters', '3'))<br />
 								#set ($VOID = $velocityPortletPreferences.setValue('assetTypes',
-								'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,com.liferay.portlet.documentlibrary.model.DLFileEntry,com.liferay.portlet.bookmarks.model.BookmarksEntry,com.liferay.portlet.blogs.model.BlogsEntry,com.liferay.portlet.messageboards.model.MBMessage,com.liferay.portlet.wiki.model.WikiPage,com.liferay.portal.model.Group,com.liferay.portal.model.Layout'))<br />
+								'com.liferay.portal.model.User,com.liferay.portlet.journal.model.JournalArticle,<br/>
+								com.liferay.portlet.documentlibrary.model.DLFileEntry,<br/>
+								com.liferay.portlet.bookmarks.model.BookmarksEntry,com.liferay.portlet.blogs.model.BlogsEntry,<br/>
+								com.liferay.portlet.messageboards.model.MBMessage,com.liferay.portlet.wiki.model.WikiPage,<br/>
+								com.liferay.portal.model.Group,com.liferay.portal.model.Layout'))<br />
 								#set ($myPortletId = "quicksearch_WAR_quicksearchportlet")<br />
 								$theme.runtime($myPortletId, '',
 								$velocityPortletPreferences.toString())<br /> #set ($VOID =
